@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{ recipe.image.url }}" class="img-fluid rounded-start" alt="{{ recipe.title }}">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ recipe.title|title }}</h5>
+        <p class="card-text">{{ recipe.description }}</p>
+        <a href="{% url 'recipe_update' recipe.id %}" class="btn btn-warning rounded-1">
+          Edit
+        </a>
+        <a href="{% url 'recipe_delete' recipe.id %}" class="btn btn-danger rounded-1">
+          Delete
+        </a>
+        <p class="card-text">
+          <small class="text-muted">{{ recipe.created_at }}</small>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

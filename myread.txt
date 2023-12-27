@@ -1,0 +1,1 @@
+https://medium.com/@devsumitg/recipe-crud-project-using-the-django-framework-bootstrap-5-3160ec5b43aa

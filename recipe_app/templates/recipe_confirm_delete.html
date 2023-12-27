@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{ recipe.image.url }}" class="img-fluid rounded-start" alt="{{ recipe.title }}">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h2>{{ recipe.title }}</h2>
+        <h4 class="text-danger-50 text-danger">Are you sure to Delete?</h4>
+        
+        <form action="{% url 'recipe_delete' recipe.id %}" method="POST">
+            {% csrf_token %}
+        <button href="{% url 'recipe_delete' recipe.id %}" class="btn btn-danger btn-lg rounded-1">
+            Yes, Delete
+          </button>
+          <a href="{% url 'recipe_list' %}" class="btn btn-light rounded-1">
+            Cancel
+          </a>
+        </form>
+        <p class="mt-2">{{ recipe.description }}</p>
+        <p class="card-text">
+          <small class="text-muted">{{ recipe.created_at }}</small>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

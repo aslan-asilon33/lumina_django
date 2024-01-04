@@ -1,1 +1,11 @@
 https://medium.com/@devsumitg/recipe-crud-project-using-the-django-framework-bootstrap-5-3160ec5b43aa
+
+================= python virtual environtment
+1. python -m venv venv
+
+2venv\Scripts\activate
+
+----- example after pip install django, so run this command for all data pip in requirements.txt file
+3. pip install -r requirements.txt
+4. pip freeze > requirements.txt
+5. deactivate

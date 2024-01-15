@@ -9,3 +9,7 @@ https://medium.com/@devsumitg/recipe-crud-project-using-the-django-framework-boo
 3. pip install -r requirements.txt
 4. pip freeze > requirements.txt
 5. deactivate
+
+========================
+
+localhost : 8585

@@ -12,4 +12,5 @@ https://medium.com/@devsumitg/recipe-crud-project-using-the-django-framework-boo
 
 ========================
 
-localhost : 8585
+python manage.py runserver 8086
+localhost : 8586
